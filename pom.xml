@@ -41,6 +41,17 @@
                     </webApp>
                 </configuration>
             </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            
         </plugins>
     </build>
 
@@ -89,12 +100,29 @@
             <version>0.9.1</version>
             <scope>runtime</scope>
         </dependency>
+        
+        <!-- Web容器在运行时会提供的依赖：servlet-api -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
+        <!-- Web容器在运行时会提供的依赖：jstl-api -->
+        <!-- <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>jstl-api</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency> -->
+        <!-- Web容器在运行时会提供的依赖：标准标签库 standard -->
+        <dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+            <scope>provided</scope>
+		</dependency>
+		
     </dependencies>
 
 </project>
